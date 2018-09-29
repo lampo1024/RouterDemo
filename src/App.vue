@@ -1,13 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
+			<Header/>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-			<router-link to="/contact">Contact</router-link>
+			<router-link to="/contact">Contact</router-link> |
+			<router-link to="/faq">FAQ</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+import Header from "_c/Header";
+export default {
+  components: { Header }
+};
+</script>
 
 <style lang="less">
 #app {

@@ -4,7 +4,6 @@ import router from '@/router'
 import store from '@/store'
 
 Vue.config.productionTip = false
-console.log(router)
 new Vue({
 	router,
 	store,
@@ -13,6 +12,11 @@ new Vue({
 		this.$router.addRoutes([{
 			path: '/contact',
 			name: 'contact',
+			component: () =>
+				import( /* webpackChunkName: "about" */ '@/views/Contact.vue')
+		}, {
+			path: '/faq',
+			name: 'faq',
 			component: () =>
 				import( /* webpackChunkName: "about" */ '@/views/Contact.vue')
 		}])

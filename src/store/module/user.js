@@ -1,4 +1,6 @@
-const state = {}
+const state = {
+	user_name: 'admin'
+}
 const mutations = {}
 const actions = {}
 export default {
